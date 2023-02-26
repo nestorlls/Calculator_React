@@ -3,40 +3,49 @@ import fccLogo from './image/freecodecamp-logo.png';
 import Boton from './components/button';
 import Pantalla from './components/Pantalla';
 import BotonClear from './components/BotonClear';
+import { useState } from 'react';
 
 function App() {
+  const [input, setInput] = useState('');
+
+  const addInput = (value) => {
+    setInput(input + value);
+  };
+
   return (
     <div className='App'>
       <div className='fcc-logo-container'>
         <img src={fccLogo} alt='logo de fcc' className='fcc-logo' />
       </div>
       <div className='container-calculator'>
-        <Pantalla />
+        <Pantalla input={input} />
         <div className='row'>
-          <Boton>1</Boton>
-          <Boton>2</Boton>
-          <Boton>3</Boton>
-          <Boton>+</Boton>
+          <Boton listenClick={addInput}>1</Boton>
+          <Boton listenClick={addInput}>2</Boton>
+          <Boton listenClick={addInput}>3</Boton>
+          <Boton listenClick={addInput}>+</Boton>
         </div>
         <div className='row'>
-          <Boton>4</Boton>
-          <Boton>5</Boton>
-          <Boton>6</Boton>
-          <Boton>-</Boton>
+          <Boton listenClick={addInput}>4</Boton>
+          <Boton listenClick={addInput}>5</Boton>
+          <Boton listenClick={addInput}>6</Boton>
+          <Boton listenClick={addInput}>-</Boton>
         </div>
         <div className='row'>
-          <Boton>7</Boton>
-          <Boton>8</Boton>
-          <Boton>9</Boton>
-          <Boton>*</Boton>
+          <Boton listenClick={addInput}>7</Boton>
+          <Boton listenClick={addInput}>8</Boton>
+          <Boton listenClick={addInput}>9</Boton>
+          <Boton listenClick={addInput}>*</Boton>
         </div>
         <div className='row'>
-          <Boton>=</Boton>
-          <Boton>0</Boton>
-          <Boton>.</Boton>
-          <Boton>/</Boton>
+          <Boton listenClick={addInput}>=</Boton>
+          <Boton listenClick={addInput}>0</Boton>
+          <Boton listenClick={addInput}>.</Boton>
+          <Boton listenClick={addInput}>/</Boton>
         </div>
-        <div className='row'><BotonClear>Clear</BotonClear></div>
+        <div className='row'>
+          <BotonClear>Clear</BotonClear>
+        </div>
       </div>
     </div>
   );

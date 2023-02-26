@@ -1,4 +1,4 @@
-import '../styleSheets/Boton.css'
+import '../styleSheets/Boton.css';
 
 function Boton(props) {
   const isOperator = (value) => {
@@ -8,7 +8,8 @@ function Boton(props) {
     <div
       className={`boton-container ${
         isOperator(props.children) ? 'operator' : ''
-      }`.trim()}>
+      }`.trim()}
+      onClick={() => props.listenClick(props.children)}>
       {props.children}
     </div>
   );
