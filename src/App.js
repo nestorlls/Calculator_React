@@ -9,9 +9,10 @@ function App() {
         <img src={fccLogo} alt='logo de fcc' className='fcc-logo' />
       </div>
       <div className='container-calculator'>
-        <Boton>1</Boton>
-        <Boton>+</Boton>
-        <div className='row'></div>
+        <div className='row'>
+          <Boton>1</Boton>
+          <Boton>+</Boton>
+        </div>
         <div className='row'></div>
         <div className='row'></div>
         <div className='row'></div>
