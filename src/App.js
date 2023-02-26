@@ -4,12 +4,17 @@ import Boton from './components/button';
 import Pantalla from './components/Pantalla';
 import BotonClear from './components/BotonClear';
 import { useState } from 'react';
+import { evaluate } from 'mathjs';
 
 function App() {
   const [input, setInput] = useState('');
 
   const addInput = (value) => {
     setInput(input + value);
+  };
+
+  const result = () => {
+    setInput(evaluate(input));
   };
 
   return (
@@ -38,7 +43,7 @@ function App() {
           <Boton listenClick={addInput}>*</Boton>
         </div>
         <div className='row'>
-          <Boton listenClick={addInput}>=</Boton>
+          <Boton listenClick={result}>=</Boton>
           <Boton listenClick={addInput}>0</Boton>
           <Boton listenClick={addInput}>.</Boton>
           <Boton listenClick={addInput}>/</Boton>
