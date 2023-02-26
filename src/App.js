@@ -14,7 +14,7 @@ function App() {
   };
 
   const result = () => {
-    setInput(evaluate(input));
+    input ? setInput(evaluate(input)) : alert('invalid value');
   };
 
   return (
