@@ -2,6 +2,7 @@ import './App.css';
 import fccLogo from './image/freecodecamp-logo.png';
 import Boton from './components/button';
 import Pantalla from './components/Pantalla';
+import BotonClear from './components/BotonClear';
 
 function App() {
   return (
@@ -35,7 +36,7 @@ function App() {
           <Boton>.</Boton>
           <Boton>/</Boton>
         </div>
-        <div className='row'></div>
+        <div className='row'><BotonClear>Clear</BotonClear></div>
       </div>
     </div>
   );
