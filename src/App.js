@@ -44,7 +44,7 @@ function App() {
           <Boton listenClick={addInput}>/</Boton>
         </div>
         <div className='row'>
-          <BotonClear>Clear</BotonClear>
+          <BotonClear listenClear={() => setInput('')}>Clear</BotonClear>
         </div>
       </div>
     </div>
