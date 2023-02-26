@@ -1,10 +1,10 @@
 import './App.css';
-import fccLogo from './image/freecodecamp-logo.png';
 import Boton from './components/button';
 import Pantalla from './components/Pantalla';
 import BotonClear from './components/BotonClear';
 import { useState } from 'react';
 import { evaluate } from 'mathjs';
+import Header from './components/header';
 
 function App() {
   const [input, setInput] = useState('');
@@ -19,9 +19,7 @@ function App() {
 
   return (
     <div className='App'>
-      <div className='fcc-logo-container'>
-        <img src={fccLogo} alt='logo de fcc' className='fcc-logo' />
-      </div>
+      <Header/>
       <div className='container-calculator'>
         <Pantalla input={input} />
         <div className='row'>
