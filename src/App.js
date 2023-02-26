@@ -1,23 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import fccLogo from './image/freecodecamp-logo.png';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <div className='fcc-logo-container'>
+        <img src={fccLogo} alt='logo de fcc' className='fcc-logo' />
+      </div>
     </div>
   );
 }
